@@ -1,3 +1,12 @@
-import sayHello from './lib/sayHello.js';
 
-sayHello();
+
+// $('.slider').slick({
+//   arrows: false,
+//   dots: true,
+//   infinite: true,
+//   speed: 700,
+//   fade: true,
+//   cssEase: 'linear'
+// });
+
+

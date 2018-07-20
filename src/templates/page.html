@@ -5,8 +5,6 @@ title: News
 
 {% block head %}
      <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700" rel="stylesheet">
-    <!--<link rel="stylesheet" type="text/css" href="slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" /> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
 {% endblock %}
 
@@ -81,19 +79,21 @@ title: News
                                     <!-- end title-block-->
                                     <div class="slider__slide background-img" style="background-image: url(img/slide.jpg)">
                                         <div class="slider__content">
-                                            <p class="slider__caption"> <a href="#">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage. Men lifted the bodies one by one and hurled from them from a bridge into a river below as cursing filled the air</a></p>
+                                            <div class="slider__caption"> <p><a href="#">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage. Men lifted the bodies one by one and hurled from them from a bridge into a river below as cursing filled the air</a></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- end slider__wrap -->
                                 <!-- begin slider__wrap -->
-<!--                                 <div class="slider__wrap">
+                                <!-- <div class="slider__wrap">
                                     <div class="title-block">
                                         <h3 class="title-block__title"> <a href="#">Lorem ipsum dolor sit amet</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters continue acros</span>
                                     </div>
                                     <div class="slider__slide background-img" style="background-image: url(img/slide.jpg)">
                                         <div class="slider__content">
-                                            <p class="slider__caption"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</a></p>
+                                            <div class="slider__caption"><p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</a></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div> -->
@@ -113,8 +113,9 @@ title: News
                                         <a href="#"><img src="img/nc1.jpg" class="news-col__img" alt="news"></a>
                                         <h4 class="news-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
                                         <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment-block">
-                                            <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                        <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                         </div>
                                     </div>
                                     <!-- end news-col__content -->
@@ -126,8 +127,9 @@ title: News
                                         <a href="#"><img src="img/nc2.jpg" class="news-col__img" alt="news"></a>
                                         <h4 class="news-col__title"><a href="#">How Much Do You Owe For Lunch? You Decide</a></h4>
                                         <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment-block">
-                                            <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                        <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                         </div>
                                     </div>
                                     <!-- end news-col__content -->
@@ -139,8 +141,9 @@ title: News
                                         <a href="#"><img src="img/nc3.jpg" class="news-col__img" alt="news"></a>
                                         <h4 class="news-col__title"><a href="#">Reid eyes deal to end stalemate over funding</a></h4>
                                         <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment-block">
-                                            <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                        <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                         </div>
                                     </div>
                                     <!-- end news-col__content -->
@@ -152,8 +155,9 @@ title: News
                                         <a href="#"><img src="img/nc4.jpg" class="news-col__img" alt="news"></a>
                                         <h4 class="news-col__title"><a href="#">Wall Street on Debt Deal So What?</a></h4>
                                         <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment-block">
-                                            <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                        <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                         </div>
                                     </div>
                                     <!-- end news-col__content -->
@@ -168,7 +172,7 @@ title: News
                             <!-- begin post-wrap -->
                             <div class="post-wrap">
                                 <!-- begin title-block -->
-                                <div class="title-block title-indent">
+                                <div class="title-block">
                                     <h3 class="title-block__title"> <a href="#">in syria, 'brother of a whore' gets tossed like trash</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters </span>
                                 </div>
                                 <!-- end title-block-->
@@ -192,21 +196,22 @@ title: News
                                                 <!-- end post__text -->
                                                 <!-- begin post__info -->
                                                 <div class="post__info">
-                                                    <div class="comment-block">
-                                                        <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                                    <div class="comment">
+                                                        <a href="#" class="comment__link">
+                                                        <span class="comment__bubble"></span>12</a>
                                                     </div>
                                                     <div class="tags">
                                                         <span class="tags__caption">Tags:</span>
-                                                        <a href="#" class="tag">Italy</a>,
-                                                        <a href="#" class="tag">Best wine</a>,
-                                                        <a href="#" class="tag">Spirit</a>,
-                                                        <a href="#" class="tag">World championship</a>,
-                                                        <a href="#" class="tag">Eat</a>
+                                                        <a href="#" class="tags__tag">Italy</a>,
+                                                        <a href="#" class="tags__tag">Best wine</a>,
+                                                        <a href="#" class="tags__tag">Spirit</a>,
+                                                        <a href="#" class="tags__tag">World championship</a>,
+                                                        <a href="#" class="tags__tag">Eat</a>
                                                     </div>
-                                                    <div class="social-block">
-                                                        <span class="social-block__share">Share:</span>
-                                                        <a href="#" class="social"><img src="img/facebook.jpg" alt="facebook"></a>
-                                                        <a href="#" class="social"><img src="img/twitter.jpg" alt="twitter"></a>
+                                                    <div class="social">
+                                                        <span class="social__share">Share:</span>
+                                                        <a href="#" class="social__icon"><img src="img/facebook.jpg" alt="facebook"></a>
+                                                        <a href="#" class="social__icon"><img src="img/twitter.jpg" alt="twitter"></a>
                                                     </div>
                                                 </div>
                                                 <!-- end post__info -->
@@ -223,7 +228,7 @@ title: News
                             <!-- begin post-wrap -->
                             <div class="post-wrap">
                                 <!-- begin title-block -->
-                                <div class="title-block title-indent">
+                                <div class="title-block">
                                     <h3 class="title-block__title"> <a href="#">Gruesome video shows Syria brutality</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters continue acros</span>
                                 </div>
                                 <!-- end title-block-->
@@ -247,21 +252,22 @@ title: News
                                                 <!-- end post__text -->
                                                 <!-- begin post__info -->
                                                 <div class="post__info">
-                                                    <div class="comment-block">
-                                                        <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                                    <div class="comment">
+                                                        <a href="#" class="comment__link">
+                                                        <span class="comment__bubble"></span>12</a>
                                                     </div>
                                                     <div class="tags">
                                                         <span class="tags__caption">Tags:</span>
-                                                        <a href="#" class="tag">Italy</a>,
-                                                        <a href="#" class="tag">Best wine</a>,
-                                                        <a href="#" class="tag">Spirit</a>,
-                                                        <a href="#" class="tag">World championship</a>,
-                                                        <a href="#" class="tag">Eat</a>
+                                                        <a href="#" class="tags__tag">Italy</a>,
+                                                        <a href="#" class="tags__tag">Best wine</a>,
+                                                        <a href="#" class="tags__tag">Spirit</a>,
+                                                        <a href="#" class="tags__tag">World championship</a>,
+                                                        <a href="#" class="tags__tag">Eat</a>
                                                     </div>
-                                                    <div class="social-block">
-                                                        <span class="social-block__share">Share:</span>
-                                                        <a href="#" class="social"><img src="img/facebook.jpg" alt="facebook"></a>
-                                                        <a href="#" class="social"><img src="img/twitter.jpg" alt="twitter"></a>
+                                                    <div class="social">
+                                                        <span class="social__share">Share:</span>
+                                                        <a href="#" class="social__icon"><img src="img/facebook.jpg" alt="facebook"></a>
+                                                        <a href="#" class="social__icon"><img src="img/twitter.jpg" alt="twitter"></a>
                                                     </div>
                                                 </div>
                                                 <!-- end post__info -->
@@ -295,8 +301,9 @@ title: News
                                     </a>
                                     <h4 class="video-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
                                     <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment-block">
-                                        <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                    <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                     </div>
                                 </div>
                                 <!-- end video-col__content -->
@@ -314,8 +321,9 @@ title: News
                                     </a>
                                     <h4 class="video-col__title"><a href="#">Reids eyes deal to end stalemate over funding</a></h4>
                                     <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment-block">
-                                        <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                    <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                     </div>
                                 </div>
                                 <!-- end video-col__content -->
@@ -333,8 +341,9 @@ title: News
                                     </a>
                                     <h4 class="video-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
                                     <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment-block">
-                                        <a href="#" class="comment"><span class="bubble"></span>12</a>
+                                    <div class="comment">
+                                            <a href="#" class="comment__link">
+                                            <span class="comment__bubble"></span>12</a>
                                     </div>
                                 </div>
                                 <!-- end video-col__content -->
@@ -359,7 +368,5 @@ title: News
 {% endblock %}
 
 {% block script %}
-<!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-<script type="text/javascript" src="js/slick-setting.js"></script> -->
+<!--     <script type="text/javascript" src="js/app.js"></script> -->
 {% endblock %}
