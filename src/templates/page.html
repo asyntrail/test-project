@@ -3,370 +3,64 @@ title: News
 ---
 {% extends "layouts/_layout.html" %}
 
-{% block head %}
-     <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-{% endblock %}
+
 
 {% block content %}
-    <!-- begin page -->
-    <div class="page" style="background-image:url(img/main-bg.png)">
-        <!-- begin page-content -->
-        <div class="page-content">
-            <!-- begin header -->
-            <header class="header">
-                <!-- begin header__top -->
-                <div class="header__top">
-                    <a href="#" class="header__button">hotest</a>
-                    <a href="#" class="header__news">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage. <span class="chevron-right"></span></a>
-                </div>
-                <!-- end header__top -->
-                <!-- begin header__wrap -->
-                <div class="header__wrap" style="background-image:url(img/nav-background.jpg)">
-                    <!-- begin clearfix -->
-                    <div class="clearfix">
-                        <!-- begin header__logo -->
-                        <div class="header__logo">
-                            <a href="#" class="header__logo_top">LAYMAN<br> <span class="header__logo_center">politics</span><span class="header__logo_bottom">blog about politics</span></a>
-                        </div>
-                        <!-- end header__logo -->
-                        <!-- begin header__nav -->
-                        <div class="header__nav">
-                            <!-- begin header__link -->
-                            <div class="header__link">
-                                <ul>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                    <li><a href="#">Advertise</a></li>
-                                    <li><a href="#">Terms and Conditions </a></li>
-                                </ul>
-                            </div>
-                            <!-- end header__link -->
-                            <nav class="nav">
-                                <ul>
-                                    <li><a href="#">Main street</a></li>
-                                    <li><a href="#">washington dc</a></li>
-                                    <li><a href="#">wall street</a></li>
-                                    <li><a href="#">statewide</a></li>
-                                    <li><a href="#">politics</a></li>
-                                    <li><a href="#">just a bill</a></li>
-                                    <li><a href="#">video</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- end header__nav -->
-                    </div>
-                    <!-- end clearfix -->
-                </div>
-                <!-- end header__wrap -->
-            </header>
-            <!-- end header -->
-            <!-- begin content -->
-            <div class="content">
-                <!-- begin clearfix -->
-                <div class="clearfix">
-                    <!-- begin main -->
-                    <main class="main">
-                        <!-- begin top-news -->
-                        <section class="top-news">
-                            <!-- begin slider -->
-                            <div class="slider">
-                                <!-- begin slider__wrap -->
-                                <div class="slider__wrap">
-                                    <!-- begin title-block -->
-                                    <div class="title-block">
-                                        <h3 class="title-block__title"> <a href="#">Gruesome video shows Syria brutality</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters continue acros</span>
-                                    </div>
-                                    <!-- end title-block-->
-                                    <div class="slider__slide background-img" style="background-image: url(img/slide.jpg)">
-                                        <div class="slider__content">
-                                            <div class="slider__caption"> <p><a href="#">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage. Men lifted the bodies one by one and hurled from them from a bridge into a river below as cursing filled the air</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- end slider__wrap -->
-                                <!-- begin slider__wrap -->
-                                <!-- <div class="slider__wrap">
-                                    <div class="title-block">
-                                        <h3 class="title-block__title"> <a href="#">Lorem ipsum dolor sit amet</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters continue acros</span>
-                                    </div>
-                                    <div class="slider__slide background-img" style="background-image: url(img/slide.jpg)">
-                                        <div class="slider__content">
-                                            <div class="slider__caption"><p><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <!-- end slider__wrap -->
-                            </div>
-                            <!-- end slider -->
-                        </section>
-                        <!-- end top-news -->
-                        <!-- begin main-news -->
-                        <section class="main-news">
-                            <!-- begin clearfix -->
-                            <div class="clearfix">
-                                <!-- begin news-col -->
-                                <div class="news-col">
-                                    <!-- begin news-col__content -->
-                                    <div class="news-col__content">
-                                        <a href="#"><img src="img/nc1.jpg" class="news-col__img" alt="news"></a>
-                                        <h4 class="news-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
-                                        <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                        </div>
-                                    </div>
-                                    <!-- end news-col__content -->
-                                </div>
-                                <!-- end news-col -->
-                                <div class="news-col">
-                                    <!-- begin news-col__content -->
-                                    <div class="news-col__content">
-                                        <a href="#"><img src="img/nc2.jpg" class="news-col__img" alt="news"></a>
-                                        <h4 class="news-col__title"><a href="#">How Much Do You Owe For Lunch? You Decide</a></h4>
-                                        <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                        </div>
-                                    </div>
-                                    <!-- end news-col__content -->
-                                </div>
-                                <!-- end news-col -->
-                                <div class="news-col">
-                                    <!-- begin news-col__content -->
-                                    <div class="news-col__content">
-                                        <a href="#"><img src="img/nc3.jpg" class="news-col__img" alt="news"></a>
-                                        <h4 class="news-col__title"><a href="#">Reid eyes deal to end stalemate over funding</a></h4>
-                                        <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                        </div>
-                                    </div>
-                                    <!-- end news-col__content -->
-                                </div>
-                                <!-- end news-col -->
-                                <div class="news-col">
-                                    <!-- begin news-col__content -->
-                                    <div class="news-col__content">
-                                        <a href="#"><img src="img/nc4.jpg" class="news-col__img" alt="news"></a>
-                                        <h4 class="news-col__title"><a href="#">Wall Street on Debt Deal So What?</a></h4>
-                                        <p class="news-col__text">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</p>
-                                        <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                        </div>
-                                    </div>
-                                    <!-- end news-col__content -->
-                                </div>
-                                <!-- end news-col -->
-                            </div>
-                            <!-- end clearfix -->
-                        </section>
-                        <!-- end main-news -->
-                        <!-- begin other-news -->
-                        <section class="other-news">
-                            <!-- begin post-wrap -->
-                            <div class="post-wrap">
-                                <!-- begin title-block -->
-                                <div class="title-block">
-                                    <h3 class="title-block__title"> <a href="#">in syria, 'brother of a whore' gets tossed like trash</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters </span>
-                                </div>
-                                <!-- end title-block-->
-                                <!-- begin post -->
-                                <div class="post">
-                                    <!-- begin clearfix -->
-                                    <div class="clearfix">
-                                        <!-- begin post__left-col -->
-                                        <div class="post__left-col">
-                                            <a href="#"><img src="img/p1.jpg" class="post__img" alt="post"></a>
-                                        </div>
-                                        <!-- end post__left-col -->
-                                        <!-- begin post__right-col -->
-                                        <div class="post__right-col">
-                                            <!-- begin post__content -->
-                                            <div class="post__content">
-                                                <!-- begin post__text -->
-                                                <div class="post__text">
-                                                    <p>A federal judge in Ohio ruled Monday that former Rep. Steve Driehaus' defamation suit. In a case that could test the bounds of free speech, a former Democratic congressman has been allowed to proceed with his lawsuit against a prominent pro-life group that he claims contributed to his election defeat by spreading falsehoods about his record on abortion issues.</p>
-                                                </div>
-                                                <!-- end post__text -->
-                                                <!-- begin post__info -->
-                                                <div class="post__info">
-                                                    <div class="comment">
-                                                        <a href="#" class="comment__link">
-                                                        <span class="comment__bubble"></span>12</a>
-                                                    </div>
-                                                    <div class="tags">
-                                                        <span class="tags__caption">Tags:</span>
-                                                        <a href="#" class="tags__tag">Italy</a>,
-                                                        <a href="#" class="tags__tag">Best wine</a>,
-                                                        <a href="#" class="tags__tag">Spirit</a>,
-                                                        <a href="#" class="tags__tag">World championship</a>,
-                                                        <a href="#" class="tags__tag">Eat</a>
-                                                    </div>
-                                                    <div class="social">
-                                                        <span class="social__share">Share:</span>
-                                                        <a href="#" class="social__icon"><img src="img/facebook.jpg" alt="facebook"></a>
-                                                        <a href="#" class="social__icon"><img src="img/twitter.jpg" alt="twitter"></a>
-                                                    </div>
-                                                </div>
-                                                <!-- end post__info -->
-                                            </div>
-                                            <!-- end post__content -->
-                                        </div>
-                                        <!-- end post__right-col -->
-                                    </div>
-                                    <!-- end clearfix -->
-                                </div>
-                                <!-- end post-->
-                            </div>
-                            <!-- end post-wrap-->
-                            <!-- begin post-wrap -->
-                            <div class="post-wrap">
-                                <!-- begin title-block -->
-                                <div class="title-block">
-                                    <h3 class="title-block__title"> <a href="#">Gruesome video shows Syria brutality</a></h3> <span class="title-block__caption">As crackdowns against anti government protesters continue acros</span>
-                                </div>
-                                <!-- end title-block-->
-                                <!-- begin post -->
-                                <div class="post">
-                                    <!-- begin clearfix -->
-                                    <div class="clearfix">
-                                        <!-- begin post__left-col -->
-                                        <div class="post__left-col">
-                                            <a href="#"><img src="img/p2.jpg" class="post__img" alt="post"></a>
-                                        </div>
-                                        <!-- end post__left-col -->
-                                        <!-- begin post__right-col -->
-                                        <div class="post__right-col">
-                                            <!-- begin post__content -->
-                                            <div class="post__content">
-                                                <!-- begin post__text -->
-                                                <div class="post__text">
-                                                    <p>In a case that could test the bounds of free speech, a former Democratic congressman has been allowed to proceed with his lawsuit against a prominent pro-life group that he claims contributed to his election defeat by spreading falsehoods about his record on abortion issues. A federal judge in Ohio ruled Monday that former Rep. Steve Driehaus' defamation suit.</p>
-                                                </div>
-                                                <!-- end post__text -->
-                                                <!-- begin post__info -->
-                                                <div class="post__info">
-                                                    <div class="comment">
-                                                        <a href="#" class="comment__link">
-                                                        <span class="comment__bubble"></span>12</a>
-                                                    </div>
-                                                    <div class="tags">
-                                                        <span class="tags__caption">Tags:</span>
-                                                        <a href="#" class="tags__tag">Italy</a>,
-                                                        <a href="#" class="tags__tag">Best wine</a>,
-                                                        <a href="#" class="tags__tag">Spirit</a>,
-                                                        <a href="#" class="tags__tag">World championship</a>,
-                                                        <a href="#" class="tags__tag">Eat</a>
-                                                    </div>
-                                                    <div class="social">
-                                                        <span class="social__share">Share:</span>
-                                                        <a href="#" class="social__icon"><img src="img/facebook.jpg" alt="facebook"></a>
-                                                        <a href="#" class="social__icon"><img src="img/twitter.jpg" alt="twitter"></a>
-                                                    </div>
-                                                </div>
-                                                <!-- end post__info -->
-                                            </div>
-                                            <!-- end post__content -->
-                                        </div>
-                                        <!-- end post__right-col -->
-                                    </div>
-                                    <!-- end clearfix -->
-                                </div>
-                                <!-- end post-->
-                            </div>
-                            <!-- end post-wrap-->
-                        </section>
-                        <!-- end other-news -->
-                    </main>
-                    <!-- end main -->
-                    <!-- begin aside -->
-                    <aside class="aside">
-                        <section class="hottest-video">
-                            <h3 class="hottest-video__title">hottest video </h3>
-                            <!-- begin video_col -->
-                            <div class="video_col">
-                                <!-- begin video-col__content -->
-                                <div class="video-col__content">
-                                    <a href="#">
-                                        <div class="video-col__img background-img" style="background-image: url(img/v1.jpg)">
-                                            <div class="video-col__icon" style="background-image: url(img/play.png)">
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <h4 class="video-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
-                                    <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                    </div>
-                                </div>
-                                <!-- end video-col__content -->
-                            </div>
-                            <!-- end video_col -->
-                            <!-- begin video_col -->
-                            <div class="video_col">
-                                <!-- begin video-col__content -->
-                                <div class="video-col__content">
-                                    <a href="#">
-                                        <div class="video-col__img background-img" style="background-image: url(img/v2.jpg)">
-                                            <div class="video-col__icon" style="background-image: url(img/play.png)">
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <h4 class="video-col__title"><a href="#">Reids eyes deal to end stalemate over funding</a></h4>
-                                    <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                    </div>
-                                </div>
-                                <!-- end video-col__content -->
-                            </div>
-                            <!-- end video_col -->
-                            <!-- begin video_col -->
-                            <div class="video_col">
-                                <!-- begin video-col__content -->
-                                <div class="video-col__content">
-                                    <a href="#">
-                                        <div class="video-col__img background-img" style="background-image: url(img/v3.jpg)">
-                                            <div class="video-col__icon" style="background-image: url(img/play.png)">
-                                            </div>
-                                        </div>
-                                    </a>
-                                    <h4 class="video-col__title"><a href="#">CNN could not verify the authenticity</a></h4>
-                                    <span>The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage.</span>
-                                    <div class="comment">
-                                            <a href="#" class="comment__link">
-                                            <span class="comment__bubble"></span>12</a>
-                                    </div>
-                                </div>
-                                <!-- end video-col__content -->
-                            </div>
-                            <!-- end video_col -->
-                        </section>
-                    </aside>
-                    <!-- end aside -->
-                </div>
-                <!-- end clearfix -->
-            </div>
-            <!-- end content -->
-            <!-- begin footer -->
-            <footer class="footer">
-                <h4 class="footer__copy">Layman</h4>
-            </footer>
-            <!-- end footer -->
+    <!-- begin header -->
+    <header class="header">
+        <!-- begin header__top -->
+        <div class="header__top">
+            <a href="#" class="header__button">hotest</a>
+            <a href="#" class="header__news">The bloodied bodies lay stuffed and tangled in the back of a pickup like garbage. <span class="chevron-right"></span></a>
         </div>
-        <!-- end page-content -->
+        <!-- end header__top -->
+        <!-- begin header__wrap -->
+        <div class="header__wrap" style="background-image:url(img/nav-background.jpg)">
+            <!-- begin header__logo -->
+            <div class="logo">
+                <a href="#" class="logo__top">LAYMAN<br> <span class="logo__center">politics</span><span class="logo__bottom">blog about politics</span></a>
+            </div>
+            <!-- end header__logo -->
+            <!-- begin header__nav -->
+            <div class="header__nav">
+                <!-- begin header-links -->
+                <div class="header-links">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Advertise</a></li>
+                        <li><a href="#">Terms and Conditions </a></li>
+                    </ul>
+                </div>
+                <!-- end header-links -->
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">Main street</a></li>
+                        <li><a href="#">washington dc</a></li>
+                        <li><a class="is-active" href="#">wall street</a></li>
+                        <li><a href="#">statewide</a></li>
+                        <li><a href="#">politics</a></li>
+                        <li><a href="#">just a bill</a></li>
+                        <li><a href="#">video</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end header__nav -->
+        </div>
+        <!-- end header__wrap -->
+    </header>
+    <!-- end header -->
+    <!-- begin page-content -->
+    <div class="page-content">
+            {% include "layouts/_main.html" %}
+            {% include "layouts/_aside.html" %}
+
+
     </div>
-    <!-- end page -->
+    <!-- end page-content -->
+    {% include "layouts/_footer.html" %}
+
+
 {% endblock %}
 
-{% block script %}
-<!--     <script type="text/javascript" src="js/app.js"></script> -->
-{% endblock %}
+
+

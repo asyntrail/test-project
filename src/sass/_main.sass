@@ -1,88 +1,21 @@
-$active-color: #87d5de
-$text-color: #989898
-$text-second: #2b5e5e
-$color-title : #2e2e2e
-
-@font-face
-  font-family: "LucidaStd"
-  src: url("../fonts/LucidaStd.eot")
-  src: url("../fonts/LucidaStd.eot?#iefix") format("embedded-opentype"), url("../fonts/LucidaStd.woff2") format("woff2"), url("../fonts/LucidaStd.woff") format("woff"), url("../fonts/LucidaStd.ttf") format("truetype")
-  font-weight: 300
-  font-style: normal
-
-@font-face
-  font-family: 'LucidaStd-Bold'
-  src: url("../fonts/LucidaStd-Bold.eot")
-  src: url("../fonts/LucidaStd-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/LucidaStd-Bold.woff2") format("woff2"), url("../fonts/LucidaStd-Bold.woff") format("woff"), url("../fonts/LucidaStd-Bold.ttf") format("truetype")
-  font-weight: 300;
-  font-style: normal
-
-  font-family: 'icomoon'
-  src: url("../fonts/icomoon.eot?ecg8pc")
-  src: url("../fonts/icomoon.eot?ecg8pc#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?ecg8pc") format("truetype"), url("../fonts/icomoon.woff?ecg8pc") format("woff"), url("../fonts/icomoon.svg?ecg8pc#icomoon") format("svg")
-  font-weight: normal
-  font-style: normal
-
-[class^="icon-"], [class*=" icon-"]
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important
-  speak: none
-  font-style: normal
-  font-variant: normal
-  text-transform: none
-  line-height: 1
-  /* Better Font endering =========== */
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-.chevron-right:before
-  font-family: 'icomoon'
-  content: "\e900"
-  font-style: normal
-
-.comment__bubble:before
-  font-family: 'icomoon'
-  content: "\e96e"
-  font-style: normal
-  padding-right: 5px
-  font-size: 13px
-  vertical-align: -2px
-
-.clearfix:after
-  visibility: hidden
-  display: block
-  font-size: 0
-  content: " "
-  clear: both
-  height: 0
-
-.clearfix
-  display: inline-block
-
-/* start commented backslash hack \*/
-* html .clearfix
-  height: 1%
-
-.clearfix
-  display: block
-/* close commented backslash hack */
 
 .page
-  font-family: 'Barlow Condensed', sans-serif
   padding-top: 33px
   background: #c4dae6
   background-size: contain
   background-repeat: no-repeat
 
-.page-content
+.page-wrap
   max-width: 1000px
   margin: 0 auto
 
 .header__top
-  min-height: 40px;
+  min-height: 40px
   padding: 10px 0px 0px 32px
   background: linear-gradient(top, #ffffff, #e2e2e2)
   border-radius: 3px 3px 0 0
+  +r(580)
+    padding-left: 10px
 
 .header__button
   width: 46px
@@ -100,15 +33,15 @@ $color-title : #2e2e2e
     color: $text-color
     background-color: $active-color
 
-@mixin text-rules($size-t,$font-f,$color-t,$line-ht)
+=text-rules($size-t,$color-t,$line-ht)
   font-size: $size-t
-  font-family: $font-f
   color: $color-t
   line-height: $line-ht
 
 
 .header__news
-  @include text-rules(12px,"Georgia",$text-color,1.5)
+  +text-rules(12px,$text-color,1.5)
+  +Georgia
   text-decoration: none
   font-style: italic
   margin-left: 13px
@@ -122,37 +55,48 @@ $color-title : #2e2e2e
   padding: 25px 0px 0px 32px
   background-size: cover
   background-repeat: no-repeat
+  +clearfix
+  +r(903)
+    text-align: center
+  +r(580)
+    padding-left: 10px
 
-.header__logo
-  float: left;
+.logo
+  float: left
   display: inline-block
   text-align: center
-
-.header__logo_top
-  @include text-rules(30px,"LucidaStd-Bold",rgb(246, 246, 246), 0.754)
-  text-decoration: none
-  text-transform: uppercase
-
-.header__logo_center
-  @include text-rules(22px,"Barlow Condensed",rgb(246, 246, 246),1.222)
-  text-transform: uppercase
-  font-weight: 300
-  letter-spacing: 9px
-
-.header__logo_bottom
-  @include text-rules(10px,"LucidaStd, sans-serif",#6892a0, 2.2)
-  margin-top: 8px
-  padding-top: 8px
-  text-transform: uppercase
-  letter-spacing: 1px
-  display: block
-  border-top: 1px solid
-  color: #6892a0
-  text-align: center
+  +r(903)
+    float: none
+    margin-bottom: 10px
+  &__top
+    +text-rules(30px,rgb(246, 246, 246), 0.754)
+    +Lucida_bold
+    text-decoration: none
+    text-transform: uppercase
+  &__center
+    +text-rules(22px,rgb(246, 246, 246),1.222)
+    font-family: "Barlow Condensed", sans-serif
+    text-transform: uppercase
+    font-weight: 300
+    letter-spacing: 9px
+  &__bottom
+    +text-rules(10px,#6892a0, 2.2)
+    +Lucida
+    margin-top: 8px
+    padding-top: 8px
+    text-transform: uppercase
+    letter-spacing: 1px
+    display: block
+    border-top: 1px solid
+    color: #6892a0
+    text-align: center
 
 .header__nav
   float: left
   padding: 0px 0px 0px 26px
+  +r(903)
+    padding: 0px 0px 20px 0px
+    float: none
   ul
     list-style: none
     overflow: hidden
@@ -163,31 +107,30 @@ $color-title : #2e2e2e
     a
       display: block
       text-decoration: none
-      @include text-rules(18px,'Barlow Condensed',#fff,1.222)
+      +text-rules(18px,#fff,1.222)
       text-transform: uppercase
       padding: 0px 14px
 
-.nav li a
-  padding: 5px 14px;
-  &:hover
-      background: #092f3b;
-      box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.28)
-      box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.10)
-      border-radius: 3px
-
 .nav
   padding-top: 10px
+  li a
+    padding: 5px 14px
 
-.header__link ul li a
-  @include text-rules(14px,'Barlow Condensed',rgb(169, 169, 169),inherit)
+.nav a.is-active,
+.nav a:hover
+  background: #092f3b
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.28)
+  box-shadow: 1px 1px 0px 0px rgba(255, 255, 255, 0.10)
+  border-radius: 3px
+
+.header-links ul li a
+  +text-rules(14px,rgb(169, 169, 169),inherit)
   text-transform: uppercase
   font-weight: 300
+  &:hover
+    color: $active-color
 
-
-.header__link ul li a:hover
-  color: $active-color
-
-.content
+.page-content
   background: #ededed
   padding: 30px 15px 0px 15px
   min-height: 1126px
@@ -196,11 +139,17 @@ $color-title : #2e2e2e
   width: 77.7%
   float: left
   min-height: 500px
+  +r(903)
+    width: 100%
+    float: none
 
 .aside
   width: 22.3%
   float: left
   min-height: 500px
+  +r(903)
+    width: 100%
+    float: none
 
 .top-news
   padding: 0 15px
@@ -219,6 +168,8 @@ $color-title : #2e2e2e
   display: inline-block
   padding: 0px 35px 0px 12px
   position: relative
+  +r(766)
+    display: block
   &:after
     content: ""
     position: absolute
@@ -228,19 +179,27 @@ $color-title : #2e2e2e
     top: 0px
     border: 18px solid
     border-color: transparent transparent transparent #ae0002
+    +r(766)
+      display: none
   a
-    @include text-rules(18px,'Barlow Condensed',#fff,36px)
+    +text-rules(18px,#fff,36px)
     text-decoration: none
     text-transform: uppercase
     font-weight: 300
+    +r(500)
+      font-size: 14px
+      padding-right: 0px
     &:hover
-        color: $active-color
+      color: $active-color
 
 .title-block__caption
-  @include text-rules(12px,"Georgia",$text-color,1.5)
+  +text-rules(12px,$text-color,1.5)
+  +Georgia
   text-align: justify
   padding-left: 40px
   vertical-align: 2px
+  +r(766)
+    padding-left: 12px
 
 .background-img
   background-size: cover
@@ -252,15 +211,18 @@ $color-title : #2e2e2e
   position: relative
 
 .slider__content
-    position: absolute
-    background: #000
-    left: 37px
-    bottom: 36px
-    max-width: 336px
-    padding: 17px
+  position: absolute
+  background: #000
+  left: 37px
+  bottom: 36px
+  max-width: 336px
+  padding: 17px
+  +r(500)
+    left: 10px
 
 .slider__caption a
-  @include text-rules(12px,"Georgia",#fff,1.5)
+  +text-rules(12px,#fff,1.5)
+  +Georgia
   text-decoration: none
   &:hover
     color: $active-color
@@ -282,23 +244,29 @@ $color-title : #2e2e2e
 
 .main-news
   padding: 0 7px 6px 7px
+  +clearfix
 
 .news-col
   float: left
   width: 25%
   padding: 8px
-
-.news-col__content
-  background: #fff
-  min-height: 281px
-  padding: 20px 14px 0px 14px
-  @include text-rules(11px,"Georgia",$text-color,1.636)
-  font-style: italic
-  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.14)
-  .comment
+  +r(580)
+    width: 50%
+  +r(350)
+    width: 100%
+  &__content
+    background: #fff
+    min-height: 281px
+    padding: 20px 14px 0px 14px
+    +text-rules(11px,$text-color,1.636)
+    +Georgia
+    font-style: italic
+    box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.14)
+  &__comment-row
     text-align: right
 
-.comment__link
+
+.comment
   text-decoration: none
   color: $text-color
   &:hover
@@ -312,7 +280,8 @@ $color-title : #2e2e2e
 .news-col__title
   padding: 10px 0px 5px 0px
   a
-    @include text-rules(11px,"Georgia",$color-title,1.5)
+    +text-rules(11px,$color-title,1.5)
+    +Georgia
     font-style: normal
     &:hover
         color: $active-color
@@ -325,36 +294,39 @@ $color-title : #2e2e2e
 
 .post
   margin-top: 25px
-
-.post__left-col
-  float: left
-  width: 23.5%
-
-.post__right-col
-  float: left
-  width: 76.5%
-
-.post__img
-  height: 130px
-  width: 100%
-  object-fit: cover
-
-.post__content
-  padding: 10px 0px 0px 30px
-  min-height: 100px
-
-.post__text
-  @include text-rules(12px,"Georgia",$text-color,1.5)
-  padding-bottom: 15px
+  +clearfix
+  &__media
+    float: left
+    width: 23.5%
+    +r(500)
+      width: 100%
+      float: none
+  &__img
+    height: 130px
+    width: 100%
+    object-fit: cover
+  &__content
+    float: left
+    width: 76.5%
+    padding: 10px 0px 0px 30px
+    min-height: 100px
+    +r(500)
+      width: 100%
+      float: none
+      padding-left: 0px
+  &__text
+    +text-rules(12px,$text-color,1.5)
+    +Georgia
+    padding-bottom: 15px
 
 .tags,.social
   display: inline-block
 
 .post__info
-  @include text-rules(12px,"Georgia",#989898,1.5)
+  +text-rules(12px,#989898,1.5)
+  +Georgia
   .comment
-    padding-right: 18px
-    display: inline-block;
+    margin-right: 18px
   .tags__tag
     display: inline-block
     font-style: italic
@@ -363,15 +335,14 @@ $color-title : #2e2e2e
         color: $active-color
 
 .social__icon
-    display: inline-block
-    text-decoration: none
-    padding: 5px 2px
-    img
-      vertical-align: -3px
-      &:hover
-         box-shadow: 0px 0px 0px 2px $active-color
-         border-radius: 3px
-
+  display: inline-block
+  text-decoration: none
+  padding: 5px 2px
+  img
+    vertical-align: -3px
+    &:hover
+      box-shadow: 0px 0px 0px 2px $active-color
+      border-radius: 3px
 
 .tags
   padding: 5px 22px 5px 5px
@@ -381,43 +352,40 @@ $color-title : #2e2e2e
 
 .hottest-video
   padding: 0 14px
-
-.hottest-video_col
-  min-height: 500px
-
-.hottest-video__title
-  @include text-rules(18px,'Barlow Condensed',#fff,36px)
-  background: #ae0002
-  height: 36px
-  font-weight: 300
-  text-transform: uppercase
-  padding-left: 15px
-  border-radius: 3px
-  margin-bottom: 5px
+  &__title
+    +text-rules(18px,#fff,36px)
+    background: #ae0002
+    height: 36px
+    font-weight: 300
+    text-transform: uppercase
+    padding-left: 15px
+    border-radius: 3px
+    margin-bottom: 5px
 
 .video-col__content
   min-height: 292px
   padding-bottom: 30px
-  @include text-rules(11px,"Georgia",$text-color,1.636)
+  +text-rules(11px,$text-color,1.636)
+  +Georgia
   font-style: italic
   .comment
     display: inline-block
     padding-left: 10px
-
-.video-col__img
-  height: 172px
-  width: 100%
-  position: relative
+  .video-col__img
+    height: 172px
+    width: 100%
+    position: relative
 
 .video-col__title
   padding: 15px 0px 5px 0px
   a
-    @include text-rules(11px,"Georgia",$color-title,1.5)
+    +text-rules(11px,$color-title,1.5)
+    +Georgia
     font-style: normal
     &:hover
         color: $active-color
 
-.video-col__icon
+.video-icon
   height: 36px
   width: 36px
   background: #000
@@ -427,56 +395,23 @@ $color-title : #2e2e2e
   background-position: 60% center
   background-repeat: no-repeat
   border-radius: 3px
+  box-shadow: inset 1px 1px 1px 0px rgba(0, 0, 0, 0.28)
+  &__icon
+    display: inline-block
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-left: 20px solid #d2d2d2
+    border-bottom: 10px solid transparent
+    margin: 8px 0px 0px 10px
 
 .footer
   margin-top: 277px
   min-height: 174px
 
-
 .footer__copy
-  @include text-rules(19px,"LucidaStd",#073c58, 0.754)
+  +text-rules(19px,#073c58, 0.754)
+  +Lucida
   text-transform: uppercase
   padding-left: 5px
 
-@media (max-width: 903px)
-  .main,.aside
-    width: 100%
-    float: none
-  .header__nav
-    padding: 0px 0px 20px 0px
-    float: none
-  .header__logo
-    float: none
-    margin-bottom: 10px
-  .header__wrap
-    text-align: center
-
-@media (max-width: 766px)
-  .title-block__title:after
-    display: none
-  .title-block__title
-    display: block
-  .title-block__caption
-    padding-left: 12px
-
-@media (max-width: 580px)
-  .news-col
-    width: 50%
-  .header__top,.header__wrap
-    padding-left: 10px
-
-@media (max-width: 500px)
-  .title-block__title a
-    font-size: 14px
-    padding-right: 0px
-  .slider__content
-    left: 10px
-  .post__left-col,.post__right-col
-    width: 100%
-    float: none
-  .post__content
-    padding-left: 0px
-
-@media (max-width: 350px)
-  .news-col
-    width: 100%
