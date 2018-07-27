@@ -1,12 +1,11 @@
+import 'slick-carousel';
 
-
-// $('.slider').slick({
-//   arrows: false,
-//   dots: true,
-//   infinite: true,
-//   speed: 700,
-//   fade: true,
-//   cssEase: 'linear'
-// });
+$('.slider').slick({
+  arrows: false,
+  dots: true,
+  infinite: true,
+  speed: 700,
+  fade: true,
+});
 
 
